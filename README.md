@@ -11,13 +11,13 @@ Features:
 ## Dokumentation
 
 ### SendTextToDiscord
-`SendTextToDiscord(WebhookURL, WebhookName, message)`
+`exports['tg_discordwebhook']:SendTextToDiscord(WebhookURL, WebhookName, message)`
 - **WebhookURL:** Die URL die du bekommst wenn du auf Discord eine WebHook Integration erstellst.
 - **WebhookName:** Der Name den der Bot haben soll wenn er diese Nachricht verschickt.
 - **message:** Die Nachricht die verschickt werden soll.
 
 ### SendEmbedToDiscord
-`SendEmbedToDiscord(WebhookURL, WebhookName, color, titel, message, footer)`
+`exports['tg_discordwebhook']:SendEmbedToDiscord(WebhookURL, WebhookName, color, titel, message, footer)`
 - **WebhookURL:** Die URL die du bekommst wenn du auf Discord eine WebHook Integration erstellst.
 - **WebhookName:** Der Name den der Bot haben soll wenn er diese Nachricht verschickt.
 - **color:** Der DECIMAL Farbcode der gewünschten Embed Farbe.
@@ -26,7 +26,7 @@ Features:
 - **footer:** Die Fußnachricht die in der Embed angezeigt werden soll.
 
 ### SendEmbedAndTextToDiscord
-`SendEmbedAndTextToDiscord(WebhookURL, WebhookName, e_color, e_titel, e_message, e_footer, message)`
+`exports['tg_discordwebhook']:SendEmbedAndTextToDiscord(WebhookURL, WebhookName, e_color, e_titel, e_message, e_footer, message)`
 - **WebhookURL:** Die URL die du bekommst wenn du auf Discord eine WebHook Integration erstellst.
 - **WebhookName:** Der Name den der Bot haben soll wenn er diese Nachricht verschickt.
 - **e_color:** Der DECIMAL Farbcode der gewünschten Embed Farbe.
