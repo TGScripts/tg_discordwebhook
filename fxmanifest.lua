@@ -6,7 +6,8 @@ description 'Discord Webhook'
 version '1.1'
 
 server_scripts {
-	'server/export.lua',
+	'server/version_check.lua',
+	'server/export.lua'
 }
 
 server_exports {
