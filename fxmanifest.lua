@@ -1,23 +1,17 @@
 fx_version 'cerulean'
 games { 'gta5' }
 
-author 'Tiger (Lets_Tiger#4159)'
-description 'Discord Webhook'
-version '1.2'
+author 'Tiger (Discord: lets_tiger)'
+description 'Discord Webhook Script'
+version '1.2.1'
 
 server_scripts {
 	'server/version_check.lua',
 	'server/export.lua'
 }
 
-server_exports {
+exports {
 	'SendEmbedToDiscord',
-	'SentTextToDiscord',
-	'SendEmbedAndTextToDiscord',
-}
-
-client_exports {
-	'SendEmbedToDiscord',
-	'SentTextToDiscord',
+	'SendTextToDiscord',
 	'SendEmbedAndTextToDiscord',
 }

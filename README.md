@@ -20,20 +20,9 @@
 ![Downloads (all assets, all releases)](https://img.shields.io/github/downloads/TGScripts/tg_discordwebhook/total?label=Downloads)
 
 ---
-> [!CAUTION]
-> # tg_discordwebhook
-> **Kompatibilität:** FiveM Discord Webhook Script - ESX 1.9+
-> | **_ESX Versions_** | Supported | Own Risk |
-> |--------------------|:-----------:|:----------:|
-> | before 1.9.0       |           |     ❌    |
-> | 1.9.0 - 1.10.7     |     ✅     |          |
-> | after 1.10.7       |           |     ❌    |
-
-<hr>
-
 > [!NOTE]
 > ## Features
-> **tg_discordwebhook** ist ein Discord Webhook Script für die ESX Version 1.9+. > Dieses Script ist hauptsächlich dafür da um einfache LOG's zu kreieren ohne komplizierten Code.
+> **tg_discordwebhook** ist ein Discord Webhook Script für FiveM. Dieses Script ist hauptsächlich dafür da um einfache LOG's zu kreieren ohne komplizierten Code.
 > Features:
 > - SendTextToDiscord (Normale Text Nachricht schicken)
 > - SendEmbedToDiscord (Eine Embed Nachricht schicken)
@@ -41,39 +30,44 @@
 
 <hr>
 
+> [!CAUTION]
+> This will only work if the export is called in a ***Server*** script!
+
+<hr>
+
 > [!NOTE]
 > ## Dokumentation
-> 
 > ### SendTextToDiscord
 > ```lua
 > exports['tg_discordwebhook']:SendTextToDiscord(WebhookURL, WebhookName, message)
 > ```
-> - **WebhookURL:** Die URL die du bekommst wenn du auf Discord eine WebHook Integration erstellst.
-> - **WebhookName:** Der Name den der Bot haben soll wenn er diese Nachricht verschickt.
-> - **message:** Die Nachricht die verschickt werden soll.
-> 
+> - **WebhookURL:** Die URL, die du im Discord-Server unter *Einstellungen > Integrationen > Webhooks* erhältst.
+> - **WebhookName:** Der Name, den der Bot haben soll, wenn er die Nachricht verschickt.
+> - **message:** Die Nachricht, die verschickt werden soll.
+> ---
 > ### SendEmbedToDiscord
 > ```lua
 > exports['tg_discordwebhook']:SendEmbedToDiscord(WebhookURL, WebhookName, color, titel, message, footer)
 > ```
-> - **WebhookURL:** Die URL die du bekommst wenn du auf Discord eine WebHook Integration erstellst.
-> - **WebhookName:** Der Name den der Bot haben soll wenn er diese Nachricht verschickt.
-> - **color:** Der DECIMAL Farbcode der gewünschten Embed Farbe.
-> - **title:** Der Titel der Embed Nachricht.
-> - **message:** Die Nachricht die in der Embed stehen soll.
-> - **footer:** Die Fußnachricht die in der Embed angezeigt werden soll.
-> 
+> - **WebhookURL:** Die URL, die du im Discord-Server unter *Einstellungen > Integrationen > Webhooks* erhältst.
+> - **WebhookName:** Der Name, den der Bot haben soll, wenn er die Nachricht verschickt.
+> - **color:** Der DECIMAL-Farbcode der gewünschten Embed-Farbe, z. B. `16711680` für Rot.
+> - **titel:** Der Titel der Embed-Nachricht.
+> - **message:** Die Nachricht, die im Embed stehen soll.
+> - **footer:** Die Fußnachricht, die im Embed angezeigt werden soll.
+> ---
 > ### SendEmbedAndTextToDiscord
 > ```lua
 > exports['tg_discordwebhook']:SendEmbedAndTextToDiscord(WebhookURL, WebhookName, e_color, e_titel, e_message, e_footer, message)
 > ```
-> - **WebhookURL:** Die URL die du bekommst wenn du auf Discord eine WebHook Integration erstellst.
-> - **WebhookName:** Der Name den der Bot haben soll wenn er diese Nachricht verschickt.
-> - **e_color:** Der DECIMAL Farbcode der gewünschten Embed Farbe.
-> - **e_title:** Der Titel der Embed Nachricht.
-> - **e_message:** Die Nachricht die in der Embed stehen soll.
-> - **e_footer:** Die Fußnachricht die in der Embed angezeigt werden soll.
-> - **message:** Die Nachricht die vor der Embed stehen soll.
+> - **WebhookURL:** Die URL, die du im Discord-Server unter *Einstellungen > Integrationen > Webhooks* erhältst.
+> - **WebhookName:** Der Name, den der Bot haben soll, wenn er die Nachricht verschickt.
+> - **e_color:** Der DECIMAL-Farbcode der gewünschten Embed-Farbe, z. B. `16711680` für Rot.
+> - **e_titel:** Der Titel der Embed-Nachricht.
+> - **e_message:** Die Nachricht, die im Embed stehen soll.
+> - **e_footer:** Die Fußnachricht, die im Embed angezeigt werden soll.
+> - **message:** Die Textnachricht, die vor der Embed stehen soll.
+
 <hr>
 
 > [!TIP]
