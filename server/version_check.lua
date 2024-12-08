@@ -1,3 +1,5 @@
+local Debug = false
+
 function GetCurrentVersion()
     local version = GetResourceMetadata(GetCurrentResourceName(), "version")
     if version == nil then
@@ -43,7 +45,7 @@ Citizen.CreateThread(function()
     function checkVersion(err, responseText, headers)
         local curVersion = GetCurrentVersion()
 
-        if Config.Debug then
+        if Debug then
             print("[^3DEBUG^0] ^5Aktuelle Version des Scripts: " .. curVersion .. "^0")
         end
 
@@ -61,7 +63,7 @@ Citizen.CreateThread(function()
         if allVersions and allVersions[scriptName] then
             local newVersion = allVersions[scriptName]
             
-            if Config.Debug then
+            if Debug then
                 print("[^3DEBUG^0] ^5Neue Version aus JSON: " .. newVersion .. "^0")
             end
 
@@ -94,7 +96,7 @@ Citizen.CreateThread(function()
             print("^4|▶ ^0[^5INFO^0] Deine Version: [^1" .. curVersion .. "^0]                                                              ^4|")
             print("^4|▶ ^0[^5INFO^0] Neuste Version: [^2" .. newVersion .. "^0]                                                             ^4|")
         elseif status == "aktuell" then
-            print("^4|▶ ^0[^5INFO^0] Du hast die aktuellste Version vom " .. resourceName .. ", viel Spaß!                       ^4|")
+            print("^4|▶ ^0[^5INFO^0] Du hast die aktuellste Version vom " .. resourceName .. ", viel Spaß!                 ^4|")
             print("^4|▶ ^0[^5INFO^0] Deine Version: [^2" .. curVersion .. "^0]                                                                                    ^4|")
             print("^4|▶ ^0[^5INFO^0] Neuste Version: [^2" .. newVersion .. "^0]                                                                                   ^4|")
         end
